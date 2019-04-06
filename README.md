@@ -30,13 +30,38 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+`.forEach()` loops over each element in an array (as does `.map()`) and executes
+a function once per item. `.map()` also loops over each element but creates a new
+array with the results of the provided function.
+
 2. What is the difference between a function and a method?
+
+Both are a set of code that when invoked, will perform some sort of action. The
+difference is that a method is a function that is a *property to an object*, whereas
+a function is standalone.
 
 3. What is closure?
 
+Closure is where a lexical environment includes local variables that are accessible
+to inner functions inside that environment.
+
 4. Describe the four rules of the 'this' keyword.
 
+The `this` keyword can be defined in four different ways:
+
+  1. window/global binding: `this` refers to the `Window` object when not explicitly
+     defined in the browser.
+  2. implicit binding: `this` will refer to the object to the left of the dot when
+     using dot-notation (i.e. `this` === `cow` given `cow.name`)
+  3. new binding: `this` will refer to the newly-instantiated object when used
+     with the `new` keyword
+  4. explicit binding: `this` will refer to whatever it is specifically set to (usually
+     set using either `.apply()`, `.bind()`, or `.call()`)
+
 5. Why do we need super() in an extended class?
+
+`super()` is used to copy the properties of the parent class - similar to how we
+use `Parent.call(this, childProps)` when using prototype inheritance.
 
 ## Project Set up
 
