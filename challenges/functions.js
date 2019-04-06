@@ -39,7 +39,11 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-
+/**
+ * `myFunction()` has created a lexical environment that includes both the variable
+ * `internal` and the inner function `nestedFunction()`. This environment lets
+ * `nestedFunction()` access any variable declared outside of its own scope.
+ */
 
 const external = "I'm outside the function";
 
